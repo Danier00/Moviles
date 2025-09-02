@@ -22,6 +22,15 @@ class _MyWidgetState extends State<ImagenFadeOut > {
                 child: Image.asset('assets/images/imagen.webp'),
               ),
             ),
+             AnimatedOpacity(
+                opacity: mostrartexto ? 1.0 : 0.0,
+                duration: const Duration(seconds: 4),
+                child: Text(
+                  'Este es el texto que aparece con efecto fade-in al presionar el botón.',
+                  style: TextStyle(fontSize: 18),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -30,8 +39,7 @@ class _MyWidgetState extends State<ImagenFadeOut > {
               },
               child: const Text('Mostrar texto'),
             ),
-            if (mostrartexto)
-              Text('Texto mostrado'),
+             
           ],
         ),
       ),
