@@ -16,11 +16,9 @@ class _MyWidgetState extends State<ImagenFadeOut > {
       home: Scaffold(
         body: Column(
           children: [
-            Expanded(
-              child: Hero(
-                tag: 'imagen-hero',
-                child: Image.asset('assets/images/imagen.webp'),
-              ),
+            Hero(
+              tag: 'imagen-hero',
+              child: Image.asset('assets/images/imagen.webp'),
             ),
              AnimatedOpacity(
                 opacity: mostrartexto ? 1.0 : 0.0,
